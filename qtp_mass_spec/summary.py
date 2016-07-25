@@ -37,6 +37,9 @@ def generate_html_summary(qclient, job_id, parameters, out_dir):
     # the developer should be able to retrieve any further information needed
     # to generate the HTML summary
     artifact_id = parameters['input_data']
+
+    print(artifact_id)
+
     qclient_url = "/qiita_db/artifacts/%s/" % artifact_id
     artifact_info = qclient.get(qclient_url)
     # Get the artifact files
